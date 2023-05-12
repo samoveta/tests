@@ -25,7 +25,8 @@ public class UITest {
         Assert.assertTrue(isDisplayed);
         Assert.assertEquals(linkText, expectedText);
 
-        driver.findElement(By.id("hide_answ")).isDisplayed();
+        boolean hideAnswerIsDisplayed = driver.findElement(By.id("hide_answ")).isDisplayed();
+        Assert.assertTrue(hideAnswerIsDisplayed);
     }
 
     @AfterMethod
